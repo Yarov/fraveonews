@@ -1,5 +1,5 @@
 {
-  "name": "fraveoNewsApp",
+  "name": "fraveoNews",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
