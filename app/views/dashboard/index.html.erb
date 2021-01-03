@@ -1,0 +1,26 @@
+<h3>Ultimas Promociones:</h3>
+<div class="row m-5">
+  <%= form_tag dashboard_path, method: :get  do %>
+    <%= text_field_tag (:search) %>
+    <%= submit_tag("Buscar")%>
+  <% end %>
+</div>
+
+<div class="row">
+  <% @promotions.each do |promotion| %>
+  <div class="card m-2">
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <%= image_tag  promotion.sized(:thumbnail) %>
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="content">
+        <p>Promocode: <%= promotion.promocode%></p>
+        <p>provedor: <%= promotion.user.name%></p>
+
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

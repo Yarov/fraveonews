@@ -1,0 +1,23 @@
+<div class="page-header">
+  <%= link_to promotions_path, class: 'btn btn-default' do %>
+    All Promotions
+  <% end %>
+  <%= link_to edit_promotion_path(@promotion), class: 'btn btn-primary' do %>
+    Edit
+  <% end %>
+  <h1>Show promotion</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd><%= @promotion.title %></dd>
+
+  <dt>Description:</dt>
+  <dd><%= @promotion.description %></dd>
+
+  <dt>Promocode:</dt>
+  <dd><%= @promotion.promocode %></dd>
+</dl>
+
+<<%= image_tag  @promotion.image %>>
+
